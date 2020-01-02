@@ -9,7 +9,7 @@ npm install --save-dev typescript @types/react @types/node
 
 package.json 수정
 ```json 
-  "scripts": {`
+  "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start"
