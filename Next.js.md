@@ -96,6 +96,12 @@ const Index = props => (
 Index.getInitialProps = async function(context /* 라우팅 정보 */) {
   // ...
   // context.query.id
+
+  if (context.req){
+    //server stuff
+  } else {
+    // client stuff
+  }
   return {
     data: ...
   }
