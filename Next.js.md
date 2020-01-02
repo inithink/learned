@@ -169,3 +169,4 @@ const Highlight = dynamic(() => import('react-highlight'));
 ## 기타 도움이 될만한 정보
 브라우저 / 서버 모두 사용가능한 fetch (단순화됨, 홈페이지 참조) [isomorphic-unfetch](https://www.npmjs.com/package/isomorphic-unfetch)
 무료 static hosting [ZEIT](https://zeit.co/)
+i18n (withTranslation보다 useTranslation쓸것) [next-i18next](https://github.com/isaachinman/next-i18next)
