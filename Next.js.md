@@ -7,7 +7,6 @@ mkdir pages
 npm install --save-dev typescript @types/react @types/node
 ```
 
-```
 package.json 수정
 ```json 
   "scripts": {`
