@@ -21,7 +21,7 @@ package.json 수정
 npm run dev
 ```
 
-## 테스트 환경 (jest)
+## 테스트 환경 (typescript + jest)
 ```bash
 npm install --save-dev ts-jest jest @types/jest
 ```
