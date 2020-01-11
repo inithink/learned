@@ -20,6 +20,40 @@ package.json 수정
 ```bash
 npm run dev
 ```
+
+## 테스트 환경 (jest)
+```bash
+npm install --save-dev ts-jest jest @types/jest
+```
+jest.config.js 파일 생성 
+```javascript
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  setupFiles: [
+    '<rootDir>/inject-react.js'
+  ],
+  testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/", "<rootDir>/.idea/"],
+  globals: {
+    "ts-jest": {
+      tsConfig: "tsconfig.jest.json"
+    }
+  },
+};
+```
+
+inject-react.js 파일 생성  
+
+```javascript
+global.React = require('react');
+```
+
+package.json 수정
+```json 
+  "scripts": {
+    "test": "jest"
+  },
+```
 ## static file
 public 폴더에 있는 파일은 URL로 매핑된다.  
 예를들어 public/my-image.png가 있다면 아래와 같이 쓸 수 있다.  
