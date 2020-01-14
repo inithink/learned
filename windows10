@@ -3,5 +3,6 @@
 
 
 ## 시작 메뉴 이상할 때
+sfc /scannow
 dism /online /cleanup-image /restorehealth
 Get-AppxPackage Microsoft.Windows.ShellExperienceHost | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
