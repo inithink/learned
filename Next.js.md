@@ -26,18 +26,18 @@ npm run dev
 npm install --save-dev @zeit/next-sass node-sass
 ```
 
+#### ```<projectDir>/jest.config.js``` 파일 생성 
 ```javascript
 const withSass = require('@zeit/next-sass')
 module.exports = withSass({
 })
 ```
-```<projectDir>/jest.config.js``` 파일 생성 
 
 ## 테스트 환경 (typescript + jest)
 ```bash
 npm install --save-dev ts-jest jest @types/jest
 ```
-```<projectDir>/jest.config.js``` 파일 생성 
+#### ```<projectDir>/jest.config.js``` 파일 생성 
 ```javascript
 module.exports = {
   preset: 'ts-jest',
@@ -54,7 +54,7 @@ module.exports = {
 };
 ```
 
-```<projectDir>/inject-react.js``` 파일 생성  
+#### ```<projectDir>/inject-react.js``` 파일 생성  
 
 ```javascript
 global.React = require('react');
