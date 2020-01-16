@@ -54,6 +54,15 @@ module.exports = {
 };
 ```
 
+#### ```<projectDir>/tsconfig.jest.json```파일 생성
+```json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react"
+  }
+}
+```
 #### ```<projectDir>/inject-react.js``` 파일 생성  
 
 ```javascript
