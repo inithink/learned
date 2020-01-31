@@ -1,0 +1,23 @@
+* Entity / Repository 생성
+```kotlin
+@Embeddable
+data class UserDescriptor(
+  var name: String = ""
+)
+
+@Entity
+class User(
+  @Id val id: Long?,
+  @Embedded
+  val descriptor: UserDescriptor
+) {
+  constructor() : this(null, UserDescriptor())
+}
+
+interface UserRepository : JpaRepository<User, Long>
+```
+* 실행시 table create / 종료시 drop  
+application.properties
+```properties
+spring.jpa.hibernate.ddl-auto=create-drop
+```
