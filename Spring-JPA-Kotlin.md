@@ -41,3 +41,9 @@ spring.datasource.username=root
 spring.datasource.password=password
 spring.jpa.hibernate.ddl-auto=create-drop
 ```
+
+### flyway를 사용한 마이그레이션
+src/main/resources/db/migration  
+  
+V1__<마음대로>.sql 사용시 db 초기화  
+V2__<마음대로>.sql 사용시 db 업데이트  
