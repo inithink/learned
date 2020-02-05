@@ -4,13 +4,13 @@ docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql --
 ```
 
 ### mysql database 추가
-mysql 쉘 접속 
+mysql 쉘 접속 (위에서 비밀번호는 paasword 로 설정함)
 ```bash
 docker exec -it mysql bash -c "mysql -p"
 ```
 sql 명령으로 db 추가
 ```sql
-CREATE SCHEMA `db` DEFAULT CHARACTER SET utf8mb4;
+CREATE DATABASE `db` DEFAULT CHARACTER SET utf8mb4;
 ```
 
 ### Entity / Repository 생성  
