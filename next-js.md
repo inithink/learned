@@ -4,7 +4,7 @@ npm install --save react react-dom next
 mkdir pages
 
 # typescript 추가
-npm install --save-dev typescript @types/react @types/node
+npm install --save-dev typescript @types/react @types/react-dom @types/node
 ```
 
 package.json 수정
