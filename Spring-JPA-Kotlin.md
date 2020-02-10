@@ -53,3 +53,8 @@ V2__<마음대로>.sql 사용시 db 업데이트
 @FormParam("name") value: String
 
 
+### 파일 다운로드
+content-type: application/octet-stream
+content-disposition: attachment;filename=<FileName>    (charset 주의)
+cache-control: no-cache
+  
