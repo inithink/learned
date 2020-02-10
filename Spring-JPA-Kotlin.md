@@ -47,3 +47,9 @@ src/main/resources/db/migration
   
 V1__<마음대로>.sql 사용시 db 초기화  
 V2__<마음대로>.sql 사용시 db 업데이트  
+
+
+### Form 처리시 사용하는 Annotation
+@FormParam("name") value: String
+
+
