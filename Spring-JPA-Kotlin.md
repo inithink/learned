@@ -4,7 +4,7 @@ docker run --restart=always -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=
 ```
 
 ### mysql database 추가
-mysql 쉘 접속 (위에서 비밀번호는 paasword 로 설정함)
+mysql 쉘 접속 (위에서 비밀번호는 password 로 설정함)
 ```bash
 docker exec -it mysql bash -c "mysql -p"
 ```
