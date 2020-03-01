@@ -1,6 +1,6 @@
 ### 테스트용 mysql 생성 (docker)
 ```bash
-docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+docker run --restart=always -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql:8.0.19 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 ```
 
 ### mysql database 추가
