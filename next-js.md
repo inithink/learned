@@ -35,7 +35,7 @@ module.exports = withSass({
 
 ## 테스트 환경 (typescript + jest)
 ```bash
-npm install --save-dev ts-jest jest @types/jest
+npm install --save-dev jest @types/jest ts-jest 
 ```
 #### ```<projectDir>/jest.config.js``` 파일 생성 
 ```javascript
