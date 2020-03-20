@@ -1,0 +1,101 @@
+## Create React App + React Native (WebView)
+추가: react-native-webview  
+
+#### 웹
+url이 asset으로 들어가지기 때문에 router는 memory로 사용한다.  
+
+```jsx
+import React from 'react';
+import './App.css';
+import {Link, Route, Switch} from "react-router-dom";
+import {Router} from "react-router";
+import {createBrowserHistory, createMemoryHistory} from "history";
+
+let history = createBrowserHistory();
+if(process.env.NODE_ENV === 'production'){
+  history = createMemoryHistory()
+}
+
+export default function App() {
+  return (
+    <Router history={history}>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route exact path="/about">
+            <About/>
+          </Route>
+          <Route exact path="/users">
+            <Users/>
+          </Route>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route path="*">
+            <NotFound/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  console.log('Home');
+  return <h2>Home</h2>;
+}
+
+function About() {
+  console.log('About');
+  return <h2>About</h2>;
+}
+
+function Users() {
+  console.log('Users');
+  return <h2>Users</h2>;
+}
+
+function NotFound(){
+  console.log('NotFound');
+  return <h2>NotFound</h2>;
+}
+```
+
+#### 안드로이드
+android/app/src/main/assets 내에 static file을 둔다.
+
+```jsx
+      <WebView
+        originWhitelist={['*']}
+        source={{ uri: 'file:///android_asset/web/index.html' }}
+        renderError={errorName => {
+          return (
+            <View>
+              <Text>{errorName}</Text>
+            </View>
+          )
+        }}
+        renderLoading={() => {
+          return (
+            <View>
+              <Text>Loading...</Text>
+            </View>
+          )
+        }}
+      />
+```
