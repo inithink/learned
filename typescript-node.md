@@ -44,6 +44,14 @@ module.exports = {
 }
 ```
 
+#### ```<projectDir>/src/index.ts```파일 생성
+
+```typescript
+console.log('hello world');
+```
+
+
+
 ```bash
 # 개발 시작
 npm run dev
