@@ -32,7 +32,7 @@ module.exports = {
   "compilerOptions": {
     "module": "commonjs",
     "noImplicitReturns": true,
-    "outDir": "lib",
+    "outDir": "build",
     "sourceMap": true,
     "strict": true,
     "target": "es2017"
